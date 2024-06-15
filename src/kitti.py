@@ -16,7 +16,7 @@ def main():
 	filenames = sorted([seq_path + '/' + x for x in os.listdir(seq_path) if x.endswith('.bin')])
 
 	# You can choose any of FastGICP, FastVGICP, FastVGICPCuda, or NDTCuda
-	reg = pygicp.FastGICP()
+	reg = pygicp.FastVGICP()
 
 	# pygicp classes have the same interface as the C++ version
 	# reg.set_num_threads(8)
@@ -48,7 +48,7 @@ def main():
 		# Plot the estimated trajectory
 		traj = numpy.array([x[:3, 3] for x in poses])
 
-		if i % 30 == 0:
+		if i % 10 == 0:
 			pyplot.clf()
 			pyplot.plot(traj[:, 0], traj[:, 1])
 			pyplot.axis('equal')
