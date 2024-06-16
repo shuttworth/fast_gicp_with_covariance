@@ -265,20 +265,20 @@ def main():
 		print('fps:%.3f' % fps)
 
 		# visualize
-		# if visualize and i%5==1:
-		# 	# points_
-		# 	# points_.transform(poses[-1].dot(delta))
-		# 	# vis.add_geometry(points_)
-		# 	# vis.update_geometry(points_)
-		# 	# test
-		# 	pcd = o3d.geometry.PointCloud()
-		# 	pcd.points = o3d.utility.Vector3dVector(points_registered)
-		# 	# pcd.transform(poses[-1].dot(delta))
-		# 	vis.add_geometry(pcd)
-		# 	vis.update_geometry(pcd)
+		if visualize and i%5==1:
+			# points_
+			# points_.transform(poses[-1].dot(delta))
+			# vis.add_geometry(points_)
+			# vis.update_geometry(points_)
+			# test
+			pcd = o3d.geometry.PointCloud()
+			pcd.points = o3d.utility.Vector3dVector(points_registered)
+			# pcd.transform(poses[-1].dot(delta))
+			vis.add_geometry(pcd)
+			vis.update_geometry(pcd)
    
-		# 	vis.poll_events()
-		# 	vis.update_renderer()
+			vis.poll_events()
+			vis.update_renderer()
   
 		# FPS calculation for the last ten frames
 		

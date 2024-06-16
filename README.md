@@ -12,10 +12,12 @@
 
 Install for python
 ```shell
-cd catkin_workspace
-catkin_make -DCMAKE_BUILD_TYPE=Release
-cd src/fast_gicp
-python3 setup.py install --user
+mkdir build
+cd build
+cmake ..
+make -j8
+cd ..
+python setup.py install --user
 ```
 
 python usage (see src/fast_gicp/python):
@@ -81,7 +83,6 @@ python gicp_odometry2.py ./dataset/Replica/room0 replica 0.05 true
   <img width="35%" src="https://github.com/Lab-of-AI-and-Robotics/fast_gicp/blob/main/data/replica_0.05_traj.png"/>
   <img width="40%" src="https://github.com/Lab-of-AI-and-Robotics/fast_gicp/blob/main/data/replica_0.05_pointcloud.gif"/>
 </p>
-
 
 
 
