@@ -48,7 +48,6 @@ def tum_load_poses(path):
 		with open(path, "r") as f:
 			lines = f.readlines()
 
-		# 가까운 timestamp 찾기
 		for i in range(len(lines)):
 			if i < 3:
 				continue
@@ -58,7 +57,6 @@ def tum_load_poses(path):
 				time_dis = t
 				final_idx = i
     
-		# 최종 gt pose 저장
 		line = lines[final_idx].split()
 		xyz = np.array([  	float(line[1]),
 									float(line[2]),
